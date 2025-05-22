@@ -11,10 +11,12 @@
 
     <h1>Bonjour <?php 
 
-    if(!isset($_GET['first_name'])){
-        echo "anonyme";
+    if(isset($_GET['first_name'])){
+        echo $_GET['first_name'];
+    } else if(isset($_POST['first_name'])){
+        echo $_POST['first_name'] ;
     } else {
-        echo $_GET['first_name'] ;
+        echo "anonyme";
     }
     ?></h1>
 
